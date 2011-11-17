@@ -3,3 +3,13 @@
   color: red;
   font-weight: bold;
 }
+
+
+body {
+  background: url('bg.jpg');
+}
+
+.messages
+{
+  color: white; 
+}

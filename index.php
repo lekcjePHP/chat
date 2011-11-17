@@ -34,13 +34,15 @@ else
 $f = file("history.text");
 
 $dlugosc = count($f);
-
+?>
+<p class="messages">
+<?php
 for($i = 0; $i < $dlugosc; $i++)
 {
   echo $f[$i];
 }
 ?>
-
+</p>
 <form action="" method="POST">
 <textarea name = "stringtext" rows = "10" cols = "100">
 </textarea>
