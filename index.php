@@ -13,9 +13,17 @@ if (isset($_POST['stringtext']) && isset($_POST['nick']))
   {
     $f = fopen("history.text", "a");
      fwrite($f, "<b>");
-    fwrite($f, $_POST["nick"]);
+    //fwrite($f, $_POST["nick"]);
+    
+    $nick = $_POST["nick"];
+    $nick = htmlspecialchars($nick);
+    fwrite($f, $nick);
     fwrite($f, ": </b>");
-    fwrite($f,$_POST['stringtext']);
+    //fwrite($f,$_POST['stringtext']);
+    $stringtext = $_POST["stringtext"];
+    $stringtext = htmlspecialchars($stringtext);
+
+    fwrite($f, $stringtext);
     fwrite($f, "<br />");
   } 
 else 
